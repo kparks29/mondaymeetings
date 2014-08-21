@@ -1,2 +1,27 @@
-<h1>Meetings#new</h1>
-<p>Find me in app/views/meetings/new.html.erb</p>
+<h1>New Meeting</h1>
+
+<%= form_for @meeting do |f| %>
+
+  <%= f.number_field :business_checking, placeholder: "Business Checking", step: 0.01 %>
+  <%= f.number_field :personal_checking, placeholder: "Personal Checking", step: 0.01 %><br>
+  <%#= f.number_field :bank_balance, placeholder: "Bank Balance", step: 0.01 %>
+  <%= f.number_field :revenue, placeholder: "Revenue", step: 0.01 %>
+  <%= f.number_field :hours, placeholder: "Employee Hours" %>
+  <%= f.number_field :shifts, placeholder: "Number of Shifts" %><br>
+  <%#= f.number_field :labor_percent, placeholder: "Labor Percentage", step: 0.01 %>
+  <%= f.number_field :leads, placeholder: "Number of Leads" %>
+  <%= f.number_field :closes, placeholder: "Number of Closes" %><br>
+  <%#= f.number_field :debt_payoff, placeholder: "Debt Payoff Amount", step: 0.01 %>
+  <%#= f.number_field :yelp_average, placeholder: "Yelp Average", step: 0.01 %>
+  <%#= f.number_field :yelp_amount, placeholder: "Number of Yelps" %>
+  <%= f.number_field :yelp_one, placeholder: "# of 1 Star Yelps" %>
+  <%= f.number_field :yelp_two, placeholder: "# of 2 Star Yelps" %>
+  <%= f.number_field :yelp_three, placeholder: "# of 3 Star Yelps" %>
+  <%= f.number_field :yelp_four, placeholder: "# of 4 Star Yelps" %>
+  <%= f.number_field :yelp_five, placeholder: "# of 5 Star Yelps" %><br>
+  <%= f.label "Has Tax Been Transfered?" %>
+  <%= f.check_box :tax_is_paid %><br>
+  <%#= f.number_field :tax_amount, placeholder: "Tax Amount", step: 0.01 %>
+  <%= f.submit %>
+
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140821003234) do
+ActiveRecord::Schema.define(version: 20140821031150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20140821003234) do
     t.integer  "leads"
     t.integer  "closes"
     t.float    "debt_payoff"
-    t.integer  "yelp_average"
     t.integer  "yelp_amount"
     t.integer  "yelp_one"
     t.integer  "yelp_two"
@@ -38,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140821003234) do
     t.float    "tax_amount"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "yelp_average"
   end
 
 end

@@ -5,6 +5,7 @@
     <li>
       <%= link_to "#{m.created_at.to_formatted_s(:long)} Meeting", m %> 
   <% end %>
+  <br>
   <%= link_to "New Meeting", new_meeting_path, class: "btn btn-info" %>
 </ul>
 
