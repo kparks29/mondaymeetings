@@ -38,6 +38,6 @@ class MeetingsController < ApplicationController
 
   private
   def meeting_params
-    params.require(:meeting).permit(:business_checking, :personal_checking, :bank_balance, :revenue, :hours, :shifts, :labor_percent, :leads, :closes, :debt_payoff, :yelp_average, :yelp_amount, :yelp_one, :yelp_two, :yelp_three, :yelp_four, :yelp_five, :tax_is_paid, :tax_amount, :ink_balance)
+    params.require(:meeting).permit(:business_checking, :personal_checking, :bank_balance, :revenue, :hours, :shifts, :labor_percent, :leads, :closes, :debt_payoff, :yelp_average, :yelp_amount, :yelp_one, :yelp_two, :yelp_three, :yelp_four, :yelp_five, :tax_is_paid, :tax_amount, :ink_balance, :amount_spent)
   end
 end

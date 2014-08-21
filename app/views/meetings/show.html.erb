@@ -1,9 +1,10 @@
-<h1>Meeting <%= @meeting.created_at.to_formatted_s(:long) %></h1>
+<h1>Meeting <%= @meeting.created_at.to_formatted_s(:long) %> <%= link_to "Back", meetings_path, class: "btn btn-default" %> <%= link_to "Edit", edit_meeting_path(@meeting), class: "btn btn-warning" %></h1>
 <ul>
   <li>Business Checking: <%= number_to_currency(@meeting.business_checking) %></li>
   <li>Personal Checking: <%= number_to_currency(@meeting.personal_checking) %></li>
   <li>Bank Balance: <%= number_to_currency(@meeting.bank_balance) %></li>
   <li>Ink Balance: <%= number_to_currency(@meeting.ink_balance) %></li>
+  <li>Amount Spent on Ink: <%= number_to_currency(@meeting.amount_spent) %></li>
   <li>Revenue: <%= number_to_currency(@meeting.revenue) %></li>
   <br>
   <li>Employee Hours: <%= @meeting.hours %></li>
@@ -13,15 +14,6 @@
   <li>Number of Closes: <%= @meeting.closes %></li>
   <br>
   <li>Debt Payoff: <%= number_to_currency(@meeting.debt_payoff) %></li>
-  <br>
-  <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %>%</li>
-  <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
-  <li>1 Stars: <%= @meeting.yelp_one %></li>
-  <li>2 Stars: <%= @meeting.yelp_two %></li>
-  <li>3 Stars: <%= @meeting.yelp_three %></li>
-  <li>4 Stars: <%= @meeting.yelp_four %></li>
-  <li>5 Stars: <%= @meeting.yelp_five %></li>
-  <br>
   <li>Paid Tax?: 
     <% if @meeting.tax_is_paid %>
     Yes
@@ -30,7 +22,15 @@
     <% end %>
   </li>
   <li>Amount of Tax: <%= number_to_currency(@meeting.tax_amount) %></li>
+  <br>
+  <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %>%</li>
+  <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
+  <li>1 Stars: <%= @meeting.yelp_one %></li>
+  <li>2 Stars: <%= @meeting.yelp_two %></li>
+  <li>3 Stars: <%= @meeting.yelp_three %></li>
+  <li>4 Stars: <%= @meeting.yelp_four %></li>
+  <li>5 Stars: <%= @meeting.yelp_five %></li>
+  
 <ul>
 
-  <%= link_to "Back", meetings_path, class: "btn btn-default" %>
-  <%= link_to "Edit", edit_meeting_path(@meeting), class: "btn btn-warning" %>
+  
