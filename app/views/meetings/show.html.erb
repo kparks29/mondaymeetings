@@ -12,6 +12,8 @@
   <li>Labor Percentage: <%= number_with_precision @meeting.labor_percent, :precision => 2 %>%</li>
   <li>Number of Leads: <%= @meeting.leads %></li>
   <li>Number of Closes: <%= @meeting.closes %></li>
+  <li>Number of Photos Received: <%= @meeting.photos %></li>
+  <li>Number of Facebook Posts: <%= @meeting.fb_posts %></li>
   <br>
   <li>Debt Payoff: <%= number_to_currency(@meeting.debt_payoff) %></li>
   <li>Paid Tax?: 
