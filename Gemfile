@@ -41,6 +41,6 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'figaro'
 gem "letter_opener", :group => :development
 ruby '2.1.2'
