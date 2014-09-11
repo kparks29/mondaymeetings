@@ -26,7 +26,7 @@
   </li>
   <li>Amount of Tax: <%= number_to_currency(@meeting.tax_amount) %></li>
   <br>
-  <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %> Stars</li>
+  <li>Yelp Average: <% if @meeting.yelp_amount != 0 %><%= number_with_precision @meeting.yelp_average, :precision => 2 %><% else %>0<% end %> Stars</li>
   <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
   <li>1 Stars: <%= @meeting.yelp_one %></li>
   <li>2 Stars: <%= @meeting.yelp_two %></li>
