@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Sam - 
+      <ul>
+        <li>Weekly Revenue: <%= number_to_currency(@meeting.revenue) %></li>
+        <li>Employee Hours: <%= @meeting.hours %></li>
+        <li>Labor Percentage: <%= number_with_precision @meeting.labor_percent, :precision => 2 %>%</li>
+        <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %> Stars</li>
+        <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
+      </ul>
+    </p>
+    <p>Danielle - 
+      <ul>
+        <li>Weekly Revenue: <%= number_to_currency(@meeting.revenue) %></li>
+        <li>Employee Hours: <%= @meeting.hours %></li>
+        <li>Labor Percentage: <%= number_with_precision @meeting.labor_percent, :precision => 2 %>%</li>
+        <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %> Stars</li>
+        <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
+      </ul>
+    </p>
+    <p>Brandon - 
+      <ul>
+        <li>Weekly Revenue: <%= number_to_currency(@meeting.revenue) %></li>
+        <li>Employee Hours: <%= @meeting.hours %></li>
+        <li>Labor Percentage: <%= number_with_precision @meeting.labor_percent, :precision => 2 %>%</li>
+        <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %> Stars</li>
+        <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
+      </ul>
+    </p>  
+    <p>Thomas - 
+      <ul>
+        <li>Number of Leads: <%= @meeting.leads %></li>
+        <li>Number of Closes: <%= @meeting.closes %></li>
+        <% percent = @meeting.closes / @meeting.leads %>
+        <li>Percent of Closes: <%= number_with_precision percent, :precision => 2 %>%</li>
+        <li>Yelp Average: <%= number_with_precision @meeting.yelp_average, :precision => 2 %> Stars</li>
+        <li>Number of Yelps: <%= @meeting.yelp_amount %></li>
+      </ul>
+    </p>
+  </body>
+</html>

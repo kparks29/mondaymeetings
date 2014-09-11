@@ -19,6 +19,10 @@ class MeetingsController < ApplicationController
 
   def show
     @meeting = Meeting.find(params[:id])
+    if params[:kpi] == "true"
+      Mailer.kpi_email(@meeting).deliver
+      flash[:success] = "KPI's sent!"
+    end
   end
 
   def edit

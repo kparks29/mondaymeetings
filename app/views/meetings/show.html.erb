@@ -1,4 +1,4 @@
-<h1>Meeting <%= @meeting.created_at.to_formatted_s(:long) %> <%= link_to "Back", meetings_path, class: "btn btn-default" %> <%= link_to "Edit", edit_meeting_path(@meeting), class: "btn btn-warning" %></h1>
+<h1>Meeting <%= @meeting.created_at.to_formatted_s(:long) %> <%= link_to "Back", meetings_path, class: "btn btn-default" %> <%= link_to "Edit", edit_meeting_path(@meeting), class: "btn btn-warning" %> <%= link_to 'Send KPI\'s', meeting_path(@meeting, kpi:true), class: "btn btn-info" %></h1>
 <ul>
   <li>Business Checking: <%= number_to_currency(@meeting.business_checking) %></li>
   <li>Personal Checking: <%= number_to_currency(@meeting.personal_checking) %></li>
